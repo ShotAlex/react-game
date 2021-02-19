@@ -15,5 +15,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background:
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+
+
 }
 

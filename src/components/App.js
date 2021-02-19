@@ -1,9 +1,9 @@
-import '../styles/app.scss';
 import Header from './Header';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import Main from './Main';
 import Game from './Game';
 import Rules from './Rules';
+import './../styles/app.scss';
 
 function App() {
   return (

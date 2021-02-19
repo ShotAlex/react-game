@@ -1,3 +1,37 @@
 .header {
-  padding: 20px;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  color: #fff;
+
+  &-logo {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &-nav {
+
+    .list {
+      display: flex;
+      list-style: none;
+
+      &-item {
+        & + .list-item {
+          margin-left: 3em;
+        }
+
+        &__link {
+          text-decoration: none;
+          color: #fff;
+          transition: .2s;
+
+          &:hover {
+            transform: scale(1.1);
+            color: burlywood;
+          }
+        }
+      }
+    }
+  }
 }
