@@ -3,6 +3,46 @@
   padding: 10px;
 
   &-choose {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 40em;
 
+    &-btn {
+      margin: 2em 4em;
+      border-radius: 100%;
+      outline: none;
+      border: 2px solid burlywood;
+      height: 15em;
+      width: 15em;
+      cursor: pointer;
+      position: relative;
+
+      img {
+        width: 15em;
+        height: 15em;
+        z-index: 10;
+        position: relative;
+        transition: .25s;
+      }
+
+      span {
+        z-index: 5;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 1.2em;
+        color: #000;
+      }
+
+      &:hover {
+        img {
+          transform: translate(0, -5em);
+        }
+      }
+
+    }
   }
 }
