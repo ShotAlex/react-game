@@ -5,10 +5,12 @@ import rockImg from './../assets/images/ROCK.png';
 import scissorsImg from './../assets/images/SCISSORS.png';
 import paperImg from './../assets/images/PAPER.png';
 import {Link} from "react-router-dom";
+import game from "../store/game";
 
 const Home = () => {
   const makeChoice = (name) => {
     console.log(name)
+    game.setUserChoice(name)
   }
 
   return (
