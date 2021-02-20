@@ -1,8 +1,22 @@
 .score {
   display: flex;
   justify-content: center;
-  margin: 2em 0;
-  padding: 4em;
+  align-items: center;
+  margin-bottom: 2em;
+  padding: 1em;
   border: 1px solid #ccc;
   border-radius: 12px;
+
+  &__img {
+    height: 12em;
+  }
+  &__main {
+    font-size: 2.4em;
+    color: #fff;
+    padding: 1em 2em;
+
+    &-counter {
+      color: burlywood;
+    }
+  }
 }

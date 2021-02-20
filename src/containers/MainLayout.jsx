@@ -6,11 +6,11 @@ import Score from "../components/Score";
 const MainLayout = ({children, score = true}) => {
   return (
     <>
-      <Header />
       <main className='main'>
         {score && <Score/>}
         {children}
       </main>
+      <Header />
       <Footer />
     </>
   );

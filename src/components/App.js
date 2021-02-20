@@ -1,12 +1,12 @@
 import {Redirect, Route, Switch} from 'react-router-dom';
-import Main from './Main';
 import Game from './Game';
 import Rules from './Rules';
+import Home from './Home';
 
 function App() {
   return (
     <Switch>
-      <Route path="/" exact component={Main}/>
+      <Route path="/" exact component={Home}/>
       <Route path="/game" component={Game}/>
       <Route path="/rules" component={Rules}/>
       <Redirect to="/"/>
