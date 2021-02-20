@@ -1,11 +1,12 @@
 import React from 'react';
+import MainLayout from "../containers/MainLayout";
 
 
 const Contacts = () => {
   return (
-    <div>
+    <MainLayout>
       Contacts
-    </div>
+    </MainLayout>
   );
 };
 

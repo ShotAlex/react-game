@@ -1,0 +1,12 @@
+.rules {
+  display: flex;
+  justify-content: center;
+  padding: 8em 0;
+
+  &__image {
+    width: 30em;
+    border-radius: 100%;
+    border: 3px solid burlywood;
+    box-shadow: 0px 0px 41px 10px burlywood;
+  }
+}
