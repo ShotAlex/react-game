@@ -12,9 +12,6 @@ const Header = () => {
             <Link to="/" className='list-item__link'>Home</Link>
           </li>
           <li className='list-item'>
-            <Link to="/game" className='list-item__link'>Game</Link>
-          </li>
-          <li className='list-item'>
             <Link to="/rules" className='list-item__link'>Rules</Link>
           </li>
         </ul>
