@@ -1,6 +1,6 @@
 import React from 'react';
 import rulesImg from './../assets/images/rules.png';
-import MainLayout from "../containers/MainLayout";
+import MainLayout from '../containers/MainLayout';
 
 const Rules = () => {
   return (

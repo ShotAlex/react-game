@@ -7,10 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 40em;
+    max-width: 45em;
 
     &-btn {
-      margin: 2em 4em;
+      margin: 1.5em 3em;
       border-radius: 100%;
       outline: none;
       border: 2px solid burlywood;
@@ -34,7 +34,8 @@
         left: 50%;
         transform: translate(-50%, 0);
         font-size: 1.2em;
-        color: #000;
+        //color: #000;
+        color: burlywood;
       }
 
       &:hover {

@@ -1,0 +1,50 @@
+.game {
+  padding: 2em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-item {
+    text-align: center;
+
+    &__title {
+      font-size: 3rem;
+      color: $color-main;
+    }
+    &__result {
+      font-size: 1.2rem;
+      color: $color-main;
+    }
+    &__play-again {
+      display: block;
+      margin-top: 2em;
+      padding: 1em 2em;
+      text-decoration: none;
+      border: 1px solid #fff;
+      border-radius: .25em;
+      color: burlywood;
+      font-size: 1.5em;
+      transition: .2s;
+
+      animation-name: play-again;
+      animation-duration: 250ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+
+      &:hover {
+        color: $color-main;
+        border-color: $color-second;
+      }
+    }
+  }
+}
+
+@keyframes play-again {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
