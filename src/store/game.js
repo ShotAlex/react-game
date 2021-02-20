@@ -1,4 +1,4 @@
-import {makeAutoObservable} from 'mobx';
+import {action, computed, makeAutoObservable, observable} from 'mobx';
 import {PAPER, ROCK, SCISSORS} from '../utils/variables';
 
 class Game {
@@ -7,9 +7,17 @@ class Game {
   }
 
   score = 0
-  title = 'WAIT'
+  title = 'VS'
   userChoice = PAPER
   compChoice = SCISSORS
+
+  incrementScore() {
+    this.score += 1
+  }
+
+  decrementScore() {
+    this.score -= 1
+  }
 
   setUserChoice(choice) {
     this.userChoice = choice
@@ -31,11 +39,6 @@ class Game {
         this.compChoice = ROCK;
     }
   }
-
-
-
-
-
 }
 
 export default new Game()
