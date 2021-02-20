@@ -6,7 +6,7 @@ class Game {
     makeAutoObservable(this)
   }
 
-  score = 0
+  score = localStorage.getItem('score') || 0
   title = 'VS'
   userChoice = ROCK
   compChoice = SCISSORS
@@ -85,11 +85,13 @@ class Game {
   setWin() {
     this.setTitle(YOU_WIN)
     this.incrementScore()
+    localStorage.setItem('score', this.score)
   }
 
   setLose() {
     this.setTitle(YOU_LOSE)
     this.decrementScore()
+    localStorage.setItem('score', this.score)
   }
 
   setDraw() {
