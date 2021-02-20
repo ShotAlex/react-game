@@ -39,6 +39,8 @@
       }
 
       &:hover {
+        //box-shadow: .2em .2em 2em .75em $color-second;
+
         img {
           transform: translate(0, -5em);
         }

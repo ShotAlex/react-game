@@ -8,14 +8,15 @@
   border-radius: 12px;
 
   &__img {
-    height: 6em;
+    height: 5em;
   }
   &__main {
     font-size: 2.4em;
     color: #fff;
-    padding: 1em 2em;
+    padding: .25em 1em;
 
     &-counter {
+      font-size: 1.2em;
       color: burlywood;
     }
   }

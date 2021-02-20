@@ -2,10 +2,10 @@
   padding: 2em 1em;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   &-item {
     text-align: center;
+    flex: 1;
 
     &__title {
       font-size: 3rem;
@@ -17,7 +17,7 @@
     }
     &__play-again {
       display: block;
-      margin-top: 2em;
+      margin: 2em auto;
       padding: 1em 2em;
       text-decoration: none;
       border: 1px solid #fff;
@@ -25,6 +25,8 @@
       color: burlywood;
       font-size: 1.5em;
       transition: .2s;
+      width: fit-content;
+
 
       animation-name: play-again;
       animation-duration: 250ms;
