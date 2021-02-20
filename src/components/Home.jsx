@@ -9,8 +9,8 @@ import game from "../store/game";
 
 const Home = () => {
   const makeChoice = (name) => {
-    console.log(name)
     game.setUserChoice(name)
+    game.setCompChoice()
   }
 
   return (
