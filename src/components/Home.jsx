@@ -6,23 +6,23 @@ import scissorsImg from './../assets/images/SCISSORS.png';
 import paperImg from './../assets/images/PAPER.png';
 
 const Home = () => {
-  const makeChoice = (e) => {
-    console.log(e.target.name)
+  const makeChoice = (name) => {
+    console.log(name)
   }
 
   return (
     <MainLayout>
       <article className="home">
         <section className="home-choose">
-          <button className="home-choose-btn" onClick={makeChoice} name={ROCK}>
+          <button className="home-choose-btn" onClick={() => makeChoice(ROCK)} name={ROCK}>
             <img src={rockImg} alt={ROCK} />
             <span>{ROCK}</span>
           </button>
-          <button className="home-choose-btn" onClick={makeChoice} name={SCISSORS}>
+          <button className="home-choose-btn" onClick={() => makeChoice(SCISSORS)} name={SCISSORS}>
             <img src={scissorsImg} alt={SCISSORS} />
             <span>{SCISSORS}</span>
           </button>
-          <button className="home-choose-btn" onClick={makeChoice} name={PAPER}>
+          <button className="home-choose-btn" onClick={() => makeChoice(PAPER)} name={PAPER}>
             <img src={paperImg} alt={PAPER} />
             <span>{PAPER}</span>
           </button>

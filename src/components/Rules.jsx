@@ -1,5 +1,5 @@
 import React from 'react';
-import rulesImg from './../assets/images/rules.jpg';
+import rulesImg from './../assets/images/rules.png';
 import MainLayout from "../containers/MainLayout";
 
 const Rules = () => {
