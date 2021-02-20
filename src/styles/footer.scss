@@ -1,0 +1,23 @@
+.footer {
+  padding: 10px;
+
+  &-item {
+    display: flex;
+    justify-content: center;
+
+    &__text {
+      color: #fff;
+      opacity: .5;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: burlywood;
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
