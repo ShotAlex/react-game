@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 const Header = () => {
   return (
     <header className='header'>
-      <Link to='/' className='header-logo'>Rock-Paper-Scissors</Link>
+      {/*<Link to='/' className='header-logo'>Rock-Paper-Scissors</Link>*/}
+      <Link to='/' className='header-logo'>RPS</Link>
 
       <nav className='header-nav'>
         <ul className='list'>
@@ -13,6 +14,9 @@ const Header = () => {
           </li>
           <li className='list-item'>
             <Link to="/rules" className='list-item__link'>Rules</Link>
+          </li>
+          <li className='list-item'>
+            <Link to="/rules" className='list-item__link'>Settings</Link>
           </li>
         </ul>
       </nav>

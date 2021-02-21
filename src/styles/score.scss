@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 3em;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
-  overflow: hidden;
 
   &__img {
     height: 5em;

@@ -7,11 +7,10 @@
 
   &-logo {
     text-decoration: none;
-    color: #fff;
+    color: $color-second;
   }
 
   &-nav {
-
     .list {
       display: flex;
       list-style: none;
@@ -23,12 +22,37 @@
 
         &__link {
           text-decoration: none;
-          color: #fff;
+          color: $color-main;
           transition: .2s;
 
           &:hover {
             transform: scale(1.1);
-            color: burlywood;
+            color: $color-second;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs-size) {
+  .header {
+    flex-direction: column;
+
+    &-logo {
+      text-align: center;
+    }
+
+    &-nav {
+      .list {
+        flex-direction: column;
+
+        &-item {
+          text-align: center;
+          margin-top: .5em;
+
+          & + .list-item {
+            margin-left: 0;
           }
         }
       }
