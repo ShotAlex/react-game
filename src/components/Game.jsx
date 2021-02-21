@@ -20,17 +20,17 @@ const Game = () => {
       <article className="game">
         <section className="game-item">
           <h2 className="game-item__result">YOU PICKED {game.userChoice}</h2>
-          <img src={choices[game.userChoice]} alt={game.userChoice}/>
+          <img className="game-item__img" src={choices[game.userChoice]} alt={game.userChoice}/>
         </section>
 
-        <section className="game-item">
+        <section className="game-item main">
           <h1 className="game-item__title">{game.title}</h1>
           <Link to="/" className="game-item__play-again">PLAY AGAIN</Link>
         </section>
 
         <section className="game-item">
-          <h2 className="game-item__result">COMPUTER PICKED {game.compChoice}</h2>
-          <img src={choices[game.compChoice]} alt={game.compChoice}/>
+          <h2 className="game-item__result">OPPONENT PICKED {game.compChoice}</h2>
+          <img className="game-item__img" src={choices[game.compChoice]} alt={game.compChoice}/>
         </section>
 
       </article>
