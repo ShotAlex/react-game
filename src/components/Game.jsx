@@ -1,12 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useHotkeys } from 'react-hotkeys-hook';
+import {useHistory} from 'react-router-dom';
+import {observer} from 'mobx-react-lite';
+import game from '../store/game'
 import MainLayout from '../containers/MainLayout';
+import {names} from '../utils/lang';
 import rockImg from './../assets/images/ROCK.png';
 import scissorsImg from './../assets/images/SCISSORS.png';
 import paperImg from './../assets/images/PAPER.png';
-import game from '../store/game'
-import {observer} from 'mobx-react-lite';
-import {names} from '../utils/lang';
 
 
 const Game = () => {
@@ -16,9 +18,11 @@ const Game = () => {
     PAPER: paperImg,
   }
 
+  const history = useHistory();
+  useHotkeys('n', () => history.push('/'));
+
   const n = names[game.lang].choice;
   const gameN = names[game.lang].game;
-
 
   return (
     <MainLayout>

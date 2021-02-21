@@ -14,10 +14,11 @@
       border-radius: 100%;
       outline: none;
       border: 2px solid $color-second;
-      height: 15em;
-      width: 15em;
+      height: 18em;
+      width: 18em;
       cursor: pointer;
       position: relative;
+      background-color: transparent;
 
       img {
         width: 15em;
@@ -30,18 +31,21 @@
       span {
         z-index: 5;
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, 0);
         font-size: 1.2em;
         color: $color-second;
+        transition: .3s;
       }
 
       &:hover {
-        //box-shadow: .2em .2em 2em .75em $color-second;
-
         img {
           transform: translate(0, -5em);
+        }
+
+        span {
+          top: 65%;
         }
       }
     }
@@ -53,12 +57,12 @@
     padding-top: 3em;
 
     &-choose {
-      max-width: 35em;
+      max-width: 28em;
 
       &-btn {
         margin: 1em 2em;
-        height: 10em;
-        width: 10em;
+        height: 12em;
+        width: 12em;
 
         img {
           width: 10em;
@@ -87,12 +91,12 @@
     padding: 2em 0;
 
     &-choose {
-      max-width: 28em;
+      max-width: 20em;
 
       &-btn {
         margin: .5em 1em;
-        height: 8em;
-        width: 8em;
+        height: 9em;
+        width: 9em;
 
         img {
           width: 8em;
