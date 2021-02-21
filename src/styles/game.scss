@@ -11,11 +11,13 @@
       font-size: 3rem;
       color: $color-main;
       margin-top: 1em;
+      text-transform: uppercase;
     }
 
     &__result {
       font-size: 1.2rem;
       color: $color-main;
+      text-transform: uppercase;
     }
 
     &__play-again {

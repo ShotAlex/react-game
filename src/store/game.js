@@ -11,10 +11,15 @@ class Game {
   title = 'VS'
   userChoice = ROCK
   compChoice = SCISSORS
+  lang = 'EN'
 
   resetScore() {
     this.score = 0;
     localStorage.setItem('score', 0)
+  }
+
+  setLang(lang) {
+    this.lang = lang;
   }
 
   incrementScore() {
