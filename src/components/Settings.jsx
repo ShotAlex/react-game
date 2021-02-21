@@ -50,6 +50,13 @@ const Settings = () => {
               >
                 English
               </button>
+              <button
+                className={`settings-params__btn ${game.lang === 'ZH' && active}`}
+                onClick={(e) => setLanguage(e)}
+                name="ZH"
+              >
+                中文
+              </button>
             </li>
 
             <li className="list-item">

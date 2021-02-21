@@ -131,5 +131,71 @@ export const names = {
     footer: {
       creator: 'Разработал'
     }
-  }
+  },
+
+  ZH: {
+    score: '得分',
+    header: {
+      title: 'RSP',
+      sub: {
+        ROCK: '摇滚',
+        SCISSORS: '剪刀',
+        PAPER: '纸'
+      },
+      home: '主',
+      rules: '规则',
+      settings: '设置'
+    },
+    choice: {
+      ROCK: '摇滚',
+      SCISSORS: '剪刀',
+      PAPER: '纸'
+    },
+    game: {
+      userPicked: '你选了',
+      compPicked: '对手挑',
+      playAgain: '再玩一次',
+      WIN: '你赢了',
+      LOSE: '你输了',
+      DRAW: '绘制',
+    },
+    rules: {
+      title: '规则',
+      keys: {
+        title: '热键',
+        ROCK: '选择 \'摇滚\'',
+        SCISSORS: '选择 \'剪刀\'',
+        PAPER: '选择 \'纸\'',
+        playAgain: '再玩一次',
+      },
+    },
+    settings: {
+      title: '设置',
+      lang: {
+        title: '语言',
+      },
+      music: {
+        title: '音乐',
+        on: '上',
+        off: '关'
+      },
+      icons: {
+        title: '图标',
+        STANDARD: '标准',
+        SIMPLE: '简单',
+      },
+      theme: {
+        title: '主题',
+        STANDARD: '标准',
+        SIMPLE: '简单',
+      },
+      reset: {
+        title: '重置分数',
+        btn: '重置'
+      },
+    },
+    footer: {
+      creator: '造物主'
+    }
+  },
 }
