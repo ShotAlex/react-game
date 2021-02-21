@@ -4,6 +4,7 @@ import { DRAW, PAPER, ROCK, SCISSORS, YOU_LOSE, YOU_WIN } from '../utils/variabl
 class Game {
   constructor() {
     makeAutoObservable(this)
+    this.score = localStorage.getItem('score') || 0
     this.getInitialLang()
   }
 
