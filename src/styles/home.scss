@@ -1,6 +1,6 @@
 .home {
   text-align: center;
-  padding: 10px;
+  padding: 1em;
 
   &-choose {
     margin: 0 auto;
@@ -13,7 +13,7 @@
       margin: 1.5em 3em;
       border-radius: 100%;
       outline: none;
-      border: 2px solid burlywood;
+      border: 2px solid $color-second;
       height: 15em;
       width: 15em;
       cursor: pointer;
@@ -34,8 +34,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         font-size: 1.2em;
-        //color: #000;
-        color: burlywood;
+        color: $color-second;
       }
 
       &:hover {
@@ -45,7 +44,71 @@
           transform: translate(0, -5em);
         }
       }
+    }
+  }
+}
 
+@media screen and (max-width: $sm-size){
+  .home {
+    padding-top: 3em;
+
+    &-choose {
+      max-width: 35em;
+
+      &-btn {
+        margin: 1em 2em;
+        height: 10em;
+        width: 10em;
+
+        img {
+          width: 10em;
+          height: 10em;
+        }
+
+        span {
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          font-size: .8em;
+        }
+
+        &:hover {
+          img {
+            transform: translate(0, -3.5em);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs-size){
+  .home {
+    padding: 2em 0;
+
+    &-choose {
+      max-width: 28em;
+
+      &-btn {
+        margin: .5em 1em;
+        height: 8em;
+        width: 8em;
+
+        img {
+          width: 8em;
+          height: 8em;
+        }
+
+        span {
+          display: none;
+        }
+
+        &:hover {
+          img {
+            transform: translate(0, 0);
+          }
+        }
+      }
     }
   }
 }
