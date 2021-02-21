@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import game from '../store/game';
 import {names} from "../utils/lang";
 
+
 const Header = () => {
   const n = names[game.lang].header;
 

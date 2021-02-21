@@ -23,8 +23,8 @@ const Settings = () => {
     game.setIcons(icon)
   }
 
-
   const n = names[game.lang].settings;
+  const active = 'active'
 
   return (
     <MainLayout>
@@ -36,14 +36,38 @@ const Settings = () => {
           <ul className="list">
             <li className="list-item">
               <h2 className="settings-params__title">{n.lang.title}</h2>
-              <button className="settings-params__btn" onClick={(e) => setLanguage(e)} name="RU">Русский</button>
-              <button className="settings-params__btn" onClick={(e) => setLanguage(e)} name="EN">English</button>
+              <button
+                className={`settings-params__btn ${game.lang === 'RU' && active}`}
+                onClick={(e) => setLanguage(e)}
+                name="RU"
+              >
+                Русский
+              </button>
+              <button
+                className={`settings-params__btn ${game.lang === 'EN' && active}`}
+                onClick={(e) => setLanguage(e)}
+                name="EN"
+              >
+                English
+              </button>
             </li>
 
             <li className="list-item">
               <h2 className="settings-params__title">{n.icons.title}</h2>
-              <button className="settings-params__btn" onClick={(e) => setIcons(e)} name="STANDARD">{n.icons.STANDARD}</button>
-              <button className="settings-params__btn" onClick={(e) => setIcons(e)} name="SIMPLE">{n.icons.SIMPLE}</button>
+              <button
+                className={`settings-params__btn ${game.icons === 'STANDARD' && active}`}
+                onClick={(e) => setIcons(e)}
+                name="STANDARD"
+              >
+                {n.icons.STANDARD}
+              </button>
+              <button
+                className={`settings-params__btn ${game.icons === 'SIMPLE' && active}`}
+                onClick={(e) => setIcons(e)}
+                name="SIMPLE"
+              >
+                {n.icons.SIMPLE}
+              </button>
             </li>
 
             <li className="list-item">
