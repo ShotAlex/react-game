@@ -1,9 +1,6 @@
 import React from 'react';
 import MainLayout from '../containers/MainLayout';
-import {PAPER, ROCK, SCISSORS} from '../utils/variables';
-import rockImg from './../assets/images/ROCK.png';
-import scissorsImg from './../assets/images/SCISSORS.png';
-import paperImg from './../assets/images/PAPER.png';
+import {ICONS, PAPER, ROCK, SCISSORS} from '../utils/variables';
 import game from '../store/game';
 import {names} from '../utils/lang';
 import { useHotkeys } from 'react-hotkeys-hook';
@@ -24,21 +21,22 @@ const Home = () => {
   useHotkeys('c', () => makeChoice(PAPER));
 
   const n = names[game.lang].choice;
+  const i = ICONS[game.icons]
 
   return (
     <MainLayout>
       <article className="home">
         <section className="home-choose">
           <button className="home-choose-btn" onClick={() => makeChoice(ROCK)} name={ROCK}>
-            <img src={rockImg} alt={ROCK}/>
+            <img src={i.ROCK} alt={ROCK}/>
             <span>{n.ROCK}</span>
           </button>
           <button className="home-choose-btn" onClick={() => makeChoice(SCISSORS)} name={SCISSORS}>
-            <img src={scissorsImg} alt={SCISSORS}/>
+            <img src={i.SCISSORS} alt={SCISSORS}/>
             <span>{n.SCISSORS}</span>
           </button>
           <button className="home-choose-btn" onClick={() => makeChoice(PAPER)} name={PAPER}>
-            <img src={paperImg} alt={PAPER}/>
+            <img src={i.PAPER} alt={PAPER}/>
             <span>{n.PAPER}</span>
           </button>
         </section>

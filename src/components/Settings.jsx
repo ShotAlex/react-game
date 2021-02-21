@@ -18,6 +18,11 @@ const Settings = () => {
     game.setLang(lang)
   }
 
+  const setIcons = (e) => {
+    const icon = e.target.name
+    game.setIcons(icon)
+  }
+
 
   const n = names[game.lang].settings;
 
@@ -36,15 +41,15 @@ const Settings = () => {
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.music.title}</h2>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="ON">{n.music.on}</button>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="OFF">{n.music.off}</button>
+              <h2 className="settings-params__title">{n.icons.title}</h2>
+              <button className="settings-params__btn" onClick={(e) => setIcons(e)} name="STANDARD">{n.icons.STANDARD}</button>
+              <button className="settings-params__btn" onClick={(e) => setIcons(e)} name="SIMPLE">{n.icons.SIMPLE}</button>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.icons.title}</h2>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="STANDARD">{n.icons.STANDARD}</button>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="SIMPLE">{n.icons.SIMPLE}</button>
+              <h2 className="settings-params__title">{n.music.title}</h2>
+              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="ON">{n.music.on}</button>
+              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="OFF">{n.music.off}</button>
             </li>
 
             <li className="list-item">

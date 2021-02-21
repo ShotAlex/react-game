@@ -1,10 +1,11 @@
 import { makeAutoObservable } from 'mobx';
-import { DRAW, PAPER, ROCK, SCISSORS, YOU_LOSE, YOU_WIN } from '../utils/variables';
+import {DRAW, PAPER, ROCK, SCISSORS, STANDARD, YOU_LOSE, YOU_WIN} from '../utils/variables';
 
 class Game {
   constructor() {
     makeAutoObservable(this)
-    this.score = localStorage.getItem('score') || 0
+    this.score = +localStorage.getItem('score') || 0
+    this.icons = localStorage.getItem('icons') || STANDARD
     this.getInitialLang()
   }
 
@@ -13,6 +14,12 @@ class Game {
   userChoice = ROCK
   compChoice = SCISSORS
   lang = 'EN'
+  icons = STANDARD
+
+  setIcons(icons) {
+    this.icons = icons
+    localStorage.setItem('icons', icons)
+  }
 
   getInitialLang() {
     const lang = localStorage.getItem('lang')
