@@ -1,9 +1,14 @@
 import React from 'react';
 import MainLayout from '../containers/MainLayout';
+import game from "../store/game";
 
 const Settings = () => {
   const setLanguage = (e) => {
     console.log(e.target.name)
+  }
+
+  const resetScore = () => {
+    game.resetScore()
   }
 
 
@@ -11,6 +16,7 @@ const Settings = () => {
     <MainLayout>
       <article className="settings">
         <h1 className="settings__title">Settings</h1>
+        <hr/>
 
         <section className="settings-params">
           <ul className="list">
@@ -27,7 +33,7 @@ const Settings = () => {
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">Иконки</h2>
+              <h2 className="settings-params__title">Icons</h2>
               <button className="settings-params__btn" onClick={(e) => setLanguage(e)} name="STANDARD">STANDARD</button>
               <button className="settings-params__btn" onClick={(e) => setLanguage(e)} name="FUNNY">FUNNY</button>
             </li>
@@ -36,6 +42,12 @@ const Settings = () => {
               <h2 className="settings-params__title">Theme</h2>
               <button className="settings-params__btn" onClick={(e) => setLanguage(e)} name="STANDARD">STANDARD</button>
               <button className="settings-params__btn" onClick={(e) => setLanguage(e)} name="SIMPLE">SIMPLE</button>
+            </li>
+
+            <li className="list-item">
+              <h2 className="settings-params__title">
+                Reset score</h2>
+              <button className="settings-params__btn" onClick={() => resetScore()} >RESET SCORE</button>
             </li>
           </ul>
         </section>

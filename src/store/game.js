@@ -12,6 +12,11 @@ class Game {
   userChoice = ROCK
   compChoice = SCISSORS
 
+  resetScore() {
+    this.score = 0;
+    localStorage.setItem('score', 0)
+  }
+
   incrementScore() {
     this.score += 1
   }
