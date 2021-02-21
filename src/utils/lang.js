@@ -1,4 +1,4 @@
-import {PAPER, ROCK, SCISSORS} from "./variables";
+import {PAPER, ROCK, SCISSORS} from './variables';
 
 export const names = {
   EN: {
@@ -36,6 +36,20 @@ export const names = {
         title: 'Music',
         on: 'ON',
         off: 'OFF'
+      },
+      icons: {
+        title: 'ICONS',
+        STANDARD: 'STANDARD',
+        SIMPLE: 'SIMPLE',
+      },
+      theme: {
+        title: 'THEME',
+        STANDARD: 'STANDARD',
+        SIMPLE: 'SIMPLE',
+      },
+      reset: {
+        title: 'RESET SCORE',
+        btn: 'RESET'
       },
     },
     footer: {
@@ -79,10 +93,23 @@ export const names = {
         on: 'ВКЛ',
         off: 'ВЫКЛ'
       },
+      icons: {
+        title: 'Иконки',
+        STANDARD: 'Стандартные',
+        SIMPLE: 'Простые',
+      },
+      theme: {
+        title: 'Тема',
+        STANDARD: 'Стандартные',
+        SIMPLE: 'Простые',
+      },
+      reset: {
+        title: 'Обнулить счёт',
+        btn: 'Обнулить'
+      },
     },
     footer: {
       creator: 'Разработал'
     }
   }
-
 }

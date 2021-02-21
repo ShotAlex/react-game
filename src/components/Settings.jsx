@@ -42,21 +42,20 @@ const Settings = () => {
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">Icons</h2>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="STANDARD">STANDARD</button>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="FUNNY">FUNNY</button>
+              <h2 className="settings-params__title">{n.icons.title}</h2>
+              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="STANDARD">{n.icons.STANDARD}</button>
+              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="SIMPLE">{n.icons.SIMPLE}</button>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">Theme</h2>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="STANDARD">STANDARD</button>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="SIMPLE">SIMPLE</button>
+              <h2 className="settings-params__title">{n.theme.title}</h2>
+              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="STANDARD">{n.theme.STANDARD}</button>
+              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="SIMPLE">{n.theme.SIMPLE}</button>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">
-                Reset score</h2>
-              <button className="settings-params__btn" onClick={() => resetScore()} >RESET SCORE</button>
+              <h2 className="settings-params__title">{n.reset.title}</h2>
+              <button className="settings-params__btn" onClick={() => resetScore()} >{n.reset.btn}</button>
             </li>
           </ul>
         </section>

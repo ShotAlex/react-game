@@ -4,7 +4,7 @@ import { DRAW, PAPER, ROCK, SCISSORS, YOU_LOSE, YOU_WIN } from '../utils/variabl
 class Game {
   constructor() {
     makeAutoObservable(this)
-    this.score = +localStorage.getItem('score') || 0
+    this.getInitialLang()
   }
 
   score = 0
@@ -13,6 +13,11 @@ class Game {
   compChoice = SCISSORS
   lang = 'EN'
 
+  getInitialLang() {
+    const lang = localStorage.getItem('lang')
+    if (lang === 'RU' || lang === 'EN') this.lang = lang;
+  }
+
   resetScore() {
     this.score = 0;
     localStorage.setItem('score', 0)
@@ -20,6 +25,7 @@ class Game {
 
   setLang(lang) {
     this.lang = lang;
+    localStorage.setItem('lang', lang)
   }
 
   incrementScore() {
