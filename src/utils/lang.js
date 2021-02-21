@@ -27,6 +27,16 @@ export const names = {
       LOSE: 'YOU LOSE',
       DRAW: 'DRAW',
     },
+    rules: {
+      title: 'RULES',
+      keys: {
+        title: 'HOTKEYS',
+        ROCK: 'Choose \'ROCK\'',
+        SCISSORS: 'Choose \'SCISSORS\'',
+        PAPER: 'Choose \'PAPER\'',
+        playAgain: 'PLAY AGAIN',
+      },
+    },
     settings: {
       title: 'Settings',
       lang: {
@@ -82,6 +92,16 @@ export const names = {
       WIN: 'Ты выиграл',
       LOSE: 'Ты проиграл',
       DRAW: 'Ничья'
+    },
+    rules: {
+      title: 'Правила',
+      keys: {
+        title: 'Горячие клавиши',
+        ROCK: 'Выбрать \'Камень\'',
+        SCISSORS: 'Выбрать \'Ножницы\'',
+        PAPER: 'Выбрать \'Бумагу\'',
+        playAgain: 'Сыграть ещё',
+      },
     },
     settings: {
       title: 'Настройки',
