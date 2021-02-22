@@ -3,49 +3,62 @@ import {DRAW, PAPER, ROCK, SCISSORS, STANDARD, YOU_LOSE, YOU_WIN} from '../utils
 
 class Game {
   constructor() {
-    makeAutoObservable(this)
-    this.score = +localStorage.getItem('score') || 0
-    this.icons = localStorage.getItem('icons') || STANDARD
-    this.getInitialLang()
+    makeAutoObservable(this);
+    this.score = +localStorage.getItem('score') || 0;
+    this.icons = localStorage.getItem('icons') || STANDARD;
+    this.theme = this.initTheme();
+    this.getInitialLang();
   }
 
-  score = 0
-  title = 'VS'
-  userChoice = ROCK
-  compChoice = SCISSORS
-  lang = 'EN'
-  icons = STANDARD
+  score = 0;
+  title = 'VS';
+  userChoice = ROCK;
+  compChoice = SCISSORS;
+  lang = 'EN';
+  icons = STANDARD;
+  theme = STANDARD;
 
   setIcons(icons) {
-    this.icons = icons
-    localStorage.setItem('icons', icons)
+    this.icons = icons;
+    localStorage.setItem('icons', icons);
+  }
+
+  initTheme() {
+    const name = localStorage.getItem('theme')
+    this.setTheme(name)
+  }
+
+  setTheme(theme) {
+    this.theme = theme;
+    document.body.className = `${theme}`
+    localStorage.setItem('theme', theme);
   }
 
   getInitialLang() {
-    const lang = localStorage.getItem('lang')
+    const lang = localStorage.getItem('lang');
     if (lang === 'RU' || lang === 'EN') this.lang = lang;
   }
 
   resetScore() {
     this.score = 0;
-    localStorage.setItem('score', 0)
+    localStorage.setItem('score', 0);
   }
 
   setLang(lang) {
     this.lang = lang;
-    localStorage.setItem('lang', lang)
+    localStorage.setItem('lang', lang);
   }
 
   incrementScore() {
-    this.score += 1
+    this.score += 1;
   }
 
   decrementScore() {
-    this.score -= 1
+    this.score -= 1;
   }
 
   setUserChoice(choice) {
-    this.userChoice = choice
+    this.userChoice = choice;
   }
 
   setTitle(newTitle) {
@@ -108,20 +121,20 @@ class Game {
   }
 
   setWin() {
-    this.setTitle(YOU_WIN)
-    this.incrementScore()
-    localStorage.setItem('score', this.score)
+    this.setTitle(YOU_WIN);
+    this.incrementScore();
+    localStorage.setItem('score', this.score);
   }
 
   setLose() {
-    this.setTitle(YOU_LOSE)
-    this.decrementScore()
-    localStorage.setItem('score', this.score)
+    this.setTitle(YOU_LOSE);
+    this.decrementScore();
+    localStorage.setItem('score', this.score);
   }
 
   setDraw() {
-    this.setTitle(DRAW)
+    this.setTitle(DRAW);
   }
 }
 
-export default new Game()
+export default new Game();

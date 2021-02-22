@@ -24,8 +24,24 @@
 }
 
 body.STANDARD {
+  --color-main: #{$color-main};
+  --color-second: #{$color-second};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-first};
+  --bg-color-second: #{$bg-color-second};
+}
+
+body.INVERT {
   --color-main: #{$color-second};
   --color-second: #{$color-main};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-second};
+  --bg-color-second: #{$bg-color-first};
+}
+
+body.SIMPLE {
+  --color-main: #{$color-black};
+  --color-second: #{$color-white};
   --color-third: #{$color-third};
   --bg-color-first: #{$bg-color-second};
   --bg-color-second: #{$bg-color-first};

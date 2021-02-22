@@ -56,6 +56,7 @@ export const names = {
         title: 'THEME',
         STANDARD: 'STANDARD',
         SIMPLE: 'SIMPLE',
+        INVERT: 'INVERT',
       },
       reset: {
         title: 'RESET SCORE',
@@ -122,6 +123,7 @@ export const names = {
         title: 'Тема',
         STANDARD: 'Стандартные',
         SIMPLE: 'Простые',
+        INVERT: 'Обратная',
       },
       reset: {
         title: 'Обнулить счёт',
@@ -188,6 +190,7 @@ export const names = {
         title: '主题',
         STANDARD: '标准',
         SIMPLE: '简单',
+        INVERT: '反转',
       },
       reset: {
         title: '重置分数',
