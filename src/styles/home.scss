@@ -13,7 +13,7 @@
       margin: 1.5em 3em;
       border-radius: 100%;
       outline: none;
-      border: 2px solid $color-second;
+      border: 2px solid var(--color-second);
       height: 18em;
       width: 18em;
       cursor: pointer;
@@ -35,7 +35,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         font-size: 1.2em;
-        color: $color-second;
+        color: var(--color-second);
         transition: .3s;
       }
 

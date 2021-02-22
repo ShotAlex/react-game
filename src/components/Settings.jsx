@@ -23,6 +23,10 @@ const Settings = () => {
     game.setIcons(icon)
   }
 
+  const changeTheme = (e) => {
+      document.body.classList.toggle('STANDARD');
+  }
+
   const n = names[game.lang].settings;
   const active = 'active'
 
@@ -85,8 +89,8 @@ const Settings = () => {
 
             <li className="list-item">
               <h2 className="settings-params__title">{n.theme.title}</h2>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="STANDARD">{n.theme.STANDARD}</button>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="SIMPLE">{n.theme.SIMPLE}</button>
+              <button className="settings-params__btn" onClick={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</button>
+              <button className="settings-params__btn" onClick={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</button>
             </li>
 
             <li className="list-item">

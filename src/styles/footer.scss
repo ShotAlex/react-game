@@ -6,13 +6,13 @@
     justify-content: center;
 
     &__text {
-      color: #fff;
+      color: var(--color-main);
       opacity: .5;
     }
 
     &__link {
       text-decoration: none;
-      color: burlywood;
+      color: var(--color-second);
       opacity: .6;
 
       &:hover {

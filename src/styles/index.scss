@@ -14,11 +14,29 @@
   box-sizing: border-box;
 }
 
+// THEME
+:root {
+  --color-main: #{$color-main};
+  --color-second: #{$color-second};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-first};
+  --bg-color-second: #{$bg-color-second};
+}
+
+body.STANDARD {
+  --color-main: #{$color-second};
+  --color-second: #{$color-main};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-second};
+  --bg-color-second: #{$bg-color-first};
+}
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background:
-    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
-    linear-gradient(to left, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    linear-gradient(to right, var(--bg-color-first), var(--bg-color-second)),
+    linear-gradient(to left, var(--bg-color-first), var(--bg-color-second));
 }
 
 #root {
@@ -26,4 +44,3 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-

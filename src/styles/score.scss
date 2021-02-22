@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   margin-bottom: 3em;
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-third);
   border-radius: 1em;
 
   &__img {
@@ -14,12 +14,12 @@
 
   &__main {
     font-size: 2.4em;
-    color: #fff;
+    color: var(--color-main);
     padding: .25em 1em;
 
     &-counter {
       font-size: 1.2em;
-      color: $color-second;
+      color: var(--color-second);
     }
   }
 }

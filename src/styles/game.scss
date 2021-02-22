@@ -9,14 +9,14 @@
 
     &__title {
       font-size: 3rem;
-      color: $color-main;
+      color: var(--color-main);
       margin-top: 1em;
       text-transform: uppercase;
     }
 
     &__result {
       font-size: 1.2rem;
-      color: $color-main;
+      color: var(--color-main);
       text-transform: uppercase;
     }
 
@@ -25,9 +25,9 @@
       margin: 1em auto;
       padding: 1em 2em;
       text-decoration: none;
-      border: 1px solid $color-main;
+      border: 1px solid var(--color-main);
       border-radius: .25em;
-      color: $color-second;
+      color: var(--color-second);
       font-size: 1.5em;
       transition: .2s;
       width: fit-content;
@@ -40,8 +40,8 @@
       animation-timing-function: ease-in;
 
       &:hover {
-        color: $color-main;
-        border-color: $color-second;
+        color: var(--color-main);
+        border-color: var(--color-second);
       }
     }
   }

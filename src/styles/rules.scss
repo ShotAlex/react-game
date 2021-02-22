@@ -14,7 +14,7 @@
     margin-top: 1em;
 
     &__title {
-      color: $color-second;
+      color: var(--color-second);
       text-align: center;
     }
 
@@ -23,13 +23,13 @@
       max-width: 14em;
       width: 100%;
       text-align: left;
-      color: $color-main;
+      color: var(--color-main);
 
       &-key {
-        color: $color-second;
+        color: var(--color-second);
         font-size: 1.5em;
         padding: .1em;
-        border: 1px solid $color-main;
+        border: 1px solid var(--color-main);
         border-radius: .25em;
         width: 2em;
         height: 2em;
@@ -56,6 +56,5 @@
         opacity: 1;
       }
     }
-
   }
 }
