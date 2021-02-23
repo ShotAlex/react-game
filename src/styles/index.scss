@@ -43,7 +43,7 @@ body.SIMPLE {
   --color-main: #{$color-black};
   --color-second: #{$color-white};
   --color-third: #{$color-third};
-  --bg-color-first: #{$bg-color-second};
+  --bg-color-first: #{$color-third};
   --bg-color-second: #{$bg-color-first};
 }
 

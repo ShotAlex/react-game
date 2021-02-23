@@ -6,7 +6,7 @@ class Game {
     makeAutoObservable(this);
     this.score = +localStorage.getItem('score') || 0;
     this.icons = localStorage.getItem('icons') || STANDARD;
-    this.theme = this.initTheme();
+    this.initTheme();
     this.getInitialLang();
   }
 
