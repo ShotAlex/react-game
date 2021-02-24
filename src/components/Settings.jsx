@@ -3,6 +3,7 @@ import MainLayout from '../containers/MainLayout';
 import game from '../store/game';
 import {names} from '../utils/lang';
 import {observer} from "mobx-react-lite";
+import bgMusic from "../assets/music/back-music-1.mp3";
 
 const Settings = () => {
   const setTest = (e) => {
@@ -27,6 +28,31 @@ const Settings = () => {
     const name = e.target.name
     game.setTheme(name)
   }
+
+  const backGroundMusic = new Audio(bgMusic)
+  const playMusic = () => backGroundMusic.play()
+  const pauseMusic = () => {
+    backGroundMusic.pause()
+    backGroundMusic.currentTime = 0.0;
+  }
+  const muteMusic = () => {
+      if (backGroundMusic.volume === 0) {
+        // backGroundMusic.muted
+      backGroundMusic.volume = 1
+    } else {
+      backGroundMusic.volume = 0
+    }
+  }
+  const volumeMusicUp = () => {
+    if (backGroundMusic.volume <= 0.9)
+    backGroundMusic.volume += 0.1
+  }
+  const volumeMusicDown = () => {
+    if (backGroundMusic.volume >= 0.1) {
+      backGroundMusic.volume -= 0.1
+    }
+  }
+
 
   const n = names[game.lang].settings;
   const active = 'active'
@@ -84,20 +110,29 @@ const Settings = () => {
 
             <li className="list-item">
               <h2 className="settings-params__title">{n.music.title}</h2>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="ON">{n.music.on}</button>
-              <button className="settings-params__btn" onClick={(e) => setTest(e)} name="OFF">{n.music.off}</button>
+              <button className="settings-params__btn" onClick={() => playMusic()} name="ON">{n.music.on}</button>
+              <button className="settings-params__btn" onClick={() => pauseMusic()} name="OFF">{n.music.off}</button>
+              <button className="settings-params__btn" onClick={() => muteMusic()} name="VOLUME_MUTE">MUTE}</button>
+              <button className="settings-params__btn" onClick={() => volumeMusicUp()} name="VOLUME_UP">volume +
+              </button>
+              <button className="settings-params__btn" onClick={() => volumeMusicDown()}
+                      name="VOLUME_DOWN">volume -
+              </button>
             </li>
 
             <li className="list-item">
               <h2 className="settings-params__title">{n.theme.title}</h2>
-              <button className={`settings-params__btn ${game.theme === 'STANDARD' && active}`} onClick={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</button>
-              <button className={`settings-params__btn ${game.theme === 'INVERT' && active}`} onClick={(e) => changeTheme(e)} name="INVERT">{n.theme.INVERT}</button>
-              <button className={`settings-params__btn ${game.theme === 'SIMPLE' && active}`} onClick={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</button>
+              <button className={`settings-params__btn ${game.theme === 'STANDARD' && active}`}
+                      onClick={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</button>
+              <button className={`settings-params__btn ${game.theme === 'INVERT' && active}`}
+                      onClick={(e) => changeTheme(e)} name="INVERT">{n.theme.INVERT}</button>
+              <button className={`settings-params__btn ${game.theme === 'SIMPLE' && active}`}
+                      onClick={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</button>
             </li>
 
             <li className="list-item">
               <h2 className="settings-params__title">{n.reset.title}</h2>
-              <button className="settings-params__btn" onClick={() => resetScore()} >{n.reset.btn}</button>
+              <button className="settings-params__btn" onClick={() => resetScore()}>{n.reset.btn}</button>
             </li>
           </ul>
         </section>
