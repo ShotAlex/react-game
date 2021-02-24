@@ -45,7 +45,10 @@ export const names = {
       music: {
         title: 'Music',
         on: 'ON',
-        off: 'OFF'
+        off: 'OFF',
+        mute: 'Mute',
+        volume: 'Volume',
+        next: 'NEXT',
       },
       icons: {
         title: 'ICONS',
@@ -112,7 +115,10 @@ export const names = {
       music: {
         title: 'Музыка',
         on: 'ВКЛ',
-        off: 'ВЫКЛ'
+        off: 'ВЫКЛ',
+        mute: 'Звук',
+        volume: 'Громкость',
+        next: 'Следующая',
       },
       icons: {
         title: 'Иконки',
@@ -179,7 +185,10 @@ export const names = {
       music: {
         title: '音乐',
         on: '上',
-        off: '关'
+        off: '关',
+        mute: '静音',
+        volume: '音量',
+        next: '下一个',
       },
       icons: {
         title: '图标',

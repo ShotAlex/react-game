@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
-import {DRAW, PAPER, ROCK, SCISSORS, STANDARD, YOU_LOSE, YOU_WIN} from '../utils/variables';
+import {bgMusic, DRAW, PAPER, ROCK, SCISSORS, STANDARD, YOU_LOSE, YOU_WIN} from '../utils/variables';
+
 
 class Game {
   constructor() {
@@ -17,6 +18,49 @@ class Game {
   lang = 'EN';
   icons = STANDARD;
   theme = STANDARD;
+  // ----
+  nowPlayNumberTrack = 0
+  backGroundMusic = new Audio(bgMusic[0])
+
+
+  // MUSIC
+  playMusic() {
+    this.backGroundMusic.play();
+  }
+  stopMusic() {
+    this.backGroundMusic.pause();
+    this.backGroundMusic.currentTime = 0.0;
+  }
+  muteMusic() {
+    if (this.backGroundMusic.volume === 0) {
+      this.backGroundMusic.volume = 1;
+    } else {
+      this.backGroundMusic.volume = 0;
+    }
+  }
+  volumeMusicUp() {
+    if (this.backGroundMusic.volume <= 0.9) {
+      this.backGroundMusic.volume += 0.1;
+    }
+  }
+  volumeMusicDown() {
+    if (this.backGroundMusic.volume >= 0.1) {
+      this.backGroundMusic.volume -= 0.1;
+    }
+  }
+  nextMusic() {
+    if (this.nowPlayNumberTrack < bgMusic.length - 1) {
+      this.nowPlayNumberTrack++;
+      this.backGroundMusic.src = bgMusic[this.nowPlayNumberTrack];
+      this.playMusic();
+    } else {
+      this.nowPlayNumberTrack = 0;
+      this.backGroundMusic.src = bgMusic[0];
+      this.playMusic();
+    }
+  }
+
+
 
   setIcons(icons) {
     this.icons = icons;
