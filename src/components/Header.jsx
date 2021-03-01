@@ -1,11 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import game from '../store/game';
-import {names} from "../utils/lang";
+import {names} from '../utils/lang';
 
 
 const Header = () => {
   const n = names[game.lang].header;
+
+  const navLinks = [
+    { name: `${n.home}`, link: '/' },
+    { name: `${n.rules}`, link: '/rules' },
+    { name: `${n.settings}`, link: '/settings' },
+  ];
 
   return (
     <header className='header'>
@@ -21,15 +27,15 @@ const Header = () => {
 
       <nav className='header-nav'>
         <ul className='list'>
-          <li className='list-item'>
-            <Link to="/" className='list-item__link'>{n.home}</Link>
-          </li>
-          <li className='list-item'>
-            <Link to="/rules" className='list-item__link'>{n.rules}</Link>
-          </li>
-          <li className='list-item'>
-            <Link to="/settings" className='list-item__link'>{n.settings}</Link>
-          </li>
+          {
+            navLinks.map((item) => (
+              <li className='list-item' key={item.link}>
+                <Link to={item.link} className='list-item__link' >
+                  {item.name}
+                </Link>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </header>
