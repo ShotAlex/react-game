@@ -28,6 +28,9 @@ const Settings = () => {
   }
 
   const n = names[game.lang].settings;
+  const l = game.lang;
+  const i = game.icons;
+  const t = game.theme;
 
   return (
     <MainLayout>
@@ -39,15 +42,15 @@ const Settings = () => {
           <ul className="list">
             <li className="list-item">
               <SettingName title={n.lang.title} />
-              <SettingBtn cl={game.lang === 'RU'} click={(e) => setLanguage(e)} name="RU">Русский</SettingBtn>
-              <SettingBtn cl={game.lang === 'EN'} click={(e) => setLanguage(e)} name="EN">English</SettingBtn>
-              <SettingBtn cl={game.lang === 'ZH'} click={(e) => setLanguage(e)} name="ZH">中文</SettingBtn>
+              <SettingBtn cl={l === 'RU'} click={(e) => setLanguage(e)} name="RU">Русский</SettingBtn>
+              <SettingBtn cl={l === 'EN'} click={(e) => setLanguage(e)} name="EN">English</SettingBtn>
+              <SettingBtn cl={l === 'ZH'} click={(e) => setLanguage(e)} name="ZH">中文</SettingBtn>
             </li>
 
             <li className="list-item">
               <SettingName title={n.icons.title} />
-              <SettingBtn cl={game.icons === 'STANDARD'} click={(e) => setIcons(e)} name="STANDARD">{n.icons.STANDARD}</SettingBtn>
-              <SettingBtn cl={game.icons === 'SIMPLE'} click={(e) => setIcons(e)} name="SIMPLE">{n.icons.SIMPLE}</SettingBtn>
+              <SettingBtn cl={i === 'STANDARD'} click={(e) => setIcons(e)} name="STANDARD">{n.icons.STANDARD}</SettingBtn>
+              <SettingBtn cl={i === 'SIMPLE'} click={(e) => setIcons(e)} name="SIMPLE">{n.icons.SIMPLE}</SettingBtn>
             </li>
 
             <li className="list-item">
@@ -62,9 +65,9 @@ const Settings = () => {
 
             <li className="list-item">
               <SettingName title={n.theme.title} />
-              <SettingBtn cl={game.theme === 'STANDARD'} click={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</SettingBtn>
-              <SettingBtn cl={game.theme === 'INVERT'} click={(e) => changeTheme(e)} name="INVERT">{n.theme.INVERT}</SettingBtn>
-              <SettingBtn cl={game.theme === 'SIMPLE'} click={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</SettingBtn>
+              <SettingBtn cl={t === 'STANDARD'} click={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</SettingBtn>
+              <SettingBtn cl={t === 'INVERT'} click={(e) => changeTheme(e)} name="INVERT">{n.theme.INVERT}</SettingBtn>
+              <SettingBtn cl={t === 'SIMPLE'} click={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</SettingBtn>
             </li>
 
             <li className="list-item">
