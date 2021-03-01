@@ -23,22 +23,29 @@ const Home = () => {
   const n = names[game.lang].choice;
   const i = ICONS[game.icons]
 
+  const arrChooses = [
+    { name: ROCK },
+    { name: SCISSORS },
+    { name: PAPER },
+  ]
+
   return (
     <MainLayout>
       <article className="home">
         <section className="home-choose">
-          <button className="home-choose-btn" onClick={() => makeChoice(ROCK)} name={ROCK}>
-            <img src={i.ROCK} alt={ROCK}/>
-            <span>{n.ROCK}</span>
-          </button>
-          <button className="home-choose-btn" onClick={() => makeChoice(SCISSORS)} name={SCISSORS}>
-            <img src={i.SCISSORS} alt={SCISSORS}/>
-            <span>{n.SCISSORS}</span>
-          </button>
-          <button className="home-choose-btn" onClick={() => makeChoice(PAPER)} name={PAPER}>
-            <img src={i.PAPER} alt={PAPER}/>
-            <span>{n.PAPER}</span>
-          </button>
+          {
+            arrChooses.map((item) => (
+              <button
+                key={item.name}
+                className="home-choose-btn"
+                onClick={() => makeChoice(item.name)}
+                name={item.name}
+              >
+                <img src={i[item.name]} alt={item.name}/>
+                <span>{n[item.name]}</span>
+              </button>
+            ))
+          }
         </section>
       </article>
     </MainLayout>

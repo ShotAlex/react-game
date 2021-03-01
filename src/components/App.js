@@ -11,7 +11,7 @@ function App() {
       <Route path="/game" component={Game}/>
       <Route path="/rules" component={Rules}/>
       <Route path="/settings" component={Settings}/>
-      <Redirect to="/"/>
+      <Redirect to="/" />
     </Switch>
   );
 }
