@@ -26,7 +26,6 @@ const Game = () => {
         </section>
 
         <section className="game-item main">
-          {/*<h1 className="game-item__title">{game.title}</h1>*/}
           <h1 className="game-item__title">{gameN[game.title]}</h1>
           <Link to="/" className="game-item__play-again">{gameN.playAgain}</Link>
         </section>

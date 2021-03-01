@@ -4,6 +4,7 @@ import {observer} from 'mobx-react-lite';
 import game from '../store/game';
 import {names} from '../utils/lang';
 
+
 const Score = () => {
   return (
     <article className='score'>
