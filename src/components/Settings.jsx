@@ -1,8 +1,10 @@
 import React from 'react';
+import {observer} from 'mobx-react-lite';
 import MainLayout from '../containers/MainLayout';
 import game from '../store/game';
 import {names} from '../utils/lang';
-import {observer} from "mobx-react-lite";
+import SettingName from './Settings/SettingName';
+import SettingBtn from './Settings/SettingBtn';
 
 
 const Settings = () => {
@@ -26,7 +28,6 @@ const Settings = () => {
   }
 
   const n = names[game.lang].settings;
-  const active = 'active'
 
   return (
     <MainLayout>
@@ -37,72 +38,38 @@ const Settings = () => {
         <section className="settings-params">
           <ul className="list">
             <li className="list-item">
-              <h2 className="settings-params__title">{n.lang.title}</h2>
-              <button
-                className={`settings-params__btn ${game.lang === 'RU' && active}`}
-                onClick={(e) => setLanguage(e)}
-                name="RU"
-              >
-                Русский
-              </button>
-              <button
-                className={`settings-params__btn ${game.lang === 'EN' && active}`}
-                onClick={(e) => setLanguage(e)}
-                name="EN"
-              >
-                English
-              </button>
-              <button
-                className={`settings-params__btn ${game.lang === 'ZH' && active}`}
-                onClick={(e) => setLanguage(e)}
-                name="ZH"
-              >
-                中文
-              </button>
+              <SettingName title={n.lang.title} />
+              <SettingBtn cl={game.lang === 'RU'} click={(e) => setLanguage(e)} name="RU">Русский</SettingBtn>
+              <SettingBtn cl={game.lang === 'EN'} click={(e) => setLanguage(e)} name="EN">English</SettingBtn>
+              <SettingBtn cl={game.lang === 'ZH'} click={(e) => setLanguage(e)} name="ZH">中文</SettingBtn>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.icons.title}</h2>
-              <button
-                className={`settings-params__btn ${game.icons === 'STANDARD' && active}`}
-                onClick={(e) => setIcons(e)}
-                name="STANDARD"
-              >
-                {n.icons.STANDARD}
-              </button>
-              <button
-                className={`settings-params__btn ${game.icons === 'SIMPLE' && active}`}
-                onClick={(e) => setIcons(e)}
-                name="SIMPLE"
-              >
-                {n.icons.SIMPLE}
-              </button>
+              <SettingName title={n.icons.title} />
+              <SettingBtn cl={game.icons === 'STANDARD'} click={(e) => setIcons(e)} name="STANDARD">{n.icons.STANDARD}</SettingBtn>
+              <SettingBtn cl={game.icons === 'SIMPLE'} click={(e) => setIcons(e)} name="SIMPLE">{n.icons.SIMPLE}</SettingBtn>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.music.title} ({game.volume}%)</h2>
-              <button className="settings-params__btn" onClick={() => game.playMusic()}>{n.music.on}</button>
-              <button className="settings-params__btn" onClick={() => game.stopMusic()}>{n.music.off}</button>
-              <button className="settings-params__btn" onClick={() => game.muteMusic()}>{n.music.mute}</button>
-              <button className="settings-params__btn" onClick={() => game.nextMusic()}>{n.music.next}</button>
-              <button className="settings-params__btn" onClick={() => game.volumeMusicUp()}>{n.music.volume} +10</button>
-              <button className="settings-params__btn" onClick={() => game.volumeMusicDown()}>{n.music.volume} -10</button>
-
+              <SettingName title={`${n.music.title} (${game.volume}%)`} />
+              <SettingBtn click={() => game.playMusic()}>{n.music.on}</SettingBtn>
+              <SettingBtn click={() => game.stopMusic()}>{n.music.off}</SettingBtn>
+              <SettingBtn click={() => game.muteMusic()}>{n.music.mute}</SettingBtn>
+              <SettingBtn click={() => game.nextMusic()}>{n.music.next}</SettingBtn>
+              <SettingBtn click={() => game.volumeMusicUp()}>{n.music.volume} +10</SettingBtn>
+              <SettingBtn click={() => game.volumeMusicDown()}>{n.music.volume} -10</SettingBtn>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.theme.title}</h2>
-              <button className={`settings-params__btn ${game.theme === 'STANDARD' && active}`}
-                      onClick={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</button>
-              <button className={`settings-params__btn ${game.theme === 'INVERT' && active}`}
-                      onClick={(e) => changeTheme(e)} name="INVERT">{n.theme.INVERT}</button>
-              <button className={`settings-params__btn ${game.theme === 'SIMPLE' && active}`}
-                      onClick={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</button>
+              <SettingName title={n.theme.title} />
+              <SettingBtn cl={game.theme === 'STANDARD'} click={(e) => changeTheme(e)} name="STANDARD">{n.theme.STANDARD}</SettingBtn>
+              <SettingBtn cl={game.theme === 'INVERT'} click={(e) => changeTheme(e)} name="INVERT">{n.theme.INVERT}</SettingBtn>
+              <SettingBtn cl={game.theme === 'SIMPLE'} click={(e) => changeTheme(e)} name="SIMPLE">{n.theme.SIMPLE}</SettingBtn>
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.reset.title}</h2>
-              <button className="settings-params__btn" onClick={() => resetScore()}>{n.reset.btn}</button>
+              <SettingName title={n.reset.title} />
+              <SettingBtn click={() => resetScore()}>{n.reset.btn}</SettingBtn>
             </li>
           </ul>
         </section>
