@@ -80,13 +80,14 @@ const Settings = () => {
             </li>
 
             <li className="list-item">
-              <h2 className="settings-params__title">{n.music.title}</h2>
+              <h2 className="settings-params__title">{n.music.title} ({game.volume}%)</h2>
               <button className="settings-params__btn" onClick={() => game.playMusic()}>{n.music.on}</button>
               <button className="settings-params__btn" onClick={() => game.stopMusic()}>{n.music.off}</button>
               <button className="settings-params__btn" onClick={() => game.muteMusic()}>{n.music.mute}</button>
               <button className="settings-params__btn" onClick={() => game.nextMusic()}>{n.music.next}</button>
               <button className="settings-params__btn" onClick={() => game.volumeMusicUp()}>{n.music.volume} +10</button>
               <button className="settings-params__btn" onClick={() => game.volumeMusicDown()}>{n.music.volume} -10</button>
+
             </li>
 
             <li className="list-item">

@@ -18,10 +18,9 @@ class Game {
   lang = 'EN';
   icons = STANDARD;
   theme = STANDARD;
-  // ----
   nowPlayNumberTrack = 0
   backGroundMusic = new Audio(bgMusic[0])
-
+  volume = 100
 
   // MUSIC
   playMusic() {
@@ -34,18 +33,22 @@ class Game {
   muteMusic() {
     if (this.backGroundMusic.volume === 0) {
       this.backGroundMusic.volume = 1;
+      this.volume = 100
     } else {
       this.backGroundMusic.volume = 0;
+      this.volume = 0
     }
   }
   volumeMusicUp() {
     if (this.backGroundMusic.volume <= 0.9) {
       this.backGroundMusic.volume += 0.1;
+      this.volume += 10
     }
   }
   volumeMusicDown() {
     if (this.backGroundMusic.volume >= 0.1) {
       this.backGroundMusic.volume -= 0.1;
+      this.volume -= 10;
     }
   }
   nextMusic() {
@@ -59,8 +62,6 @@ class Game {
       this.playMusic();
     }
   }
-
-
 
   setIcons(icons) {
     this.icons = icons;
