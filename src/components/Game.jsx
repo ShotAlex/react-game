@@ -34,7 +34,6 @@ const Game = () => {
           <h2 className="game-item__result">{gameN.compPicked} {n[game.compChoice]}</h2>
           <img className="game-item__img" src={i[game.compChoice]} alt={game.compChoice}/>
         </section>
-
       </article>
     </MainLayout>
   );
