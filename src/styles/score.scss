@@ -1,0 +1,45 @@
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+  padding: 1em;
+  border: 1px solid var(--color-third);
+  border-radius: 1em;
+
+  &__img {
+    height: 5em;
+  }
+
+  &__main {
+    font-size: 2.4em;
+    color: var(--color-main);
+    padding: .25em 1em;
+
+    &-counter {
+      font-size: 1.2em;
+      color: var(--color-second);
+    }
+  }
+}
+
+@media screen  and (max-width: $sm-size){
+  .score {
+    margin-bottom: 1em;
+    padding: .5em;
+
+    &__img {
+      height: 3em;
+    }
+
+    &__main {
+      font-size: 1.8em;
+      padding: .1em .5em;
+
+      &-counter {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

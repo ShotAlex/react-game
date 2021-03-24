@@ -1,0 +1,127 @@
+.header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  color: var(--color-main);
+
+  &-logo {
+    display: flex;
+    text-decoration: none;
+
+    &__title {
+      text-decoration: none;
+      color: var(--color-second);
+    }
+
+    &__subtitle {
+      display: none;
+
+      span {
+        display: block;
+        &::first-letter {
+          color: var(--color-second);
+        }
+      }
+    }
+
+    &:hover {
+      .header-logo__subtitle {
+        display: flex;
+        width: 16em;
+        color: var(--color-main);
+        white-space:nowrap;
+        overflow:hidden;
+        -webkit-animation: type 2s steps(30, end);
+        animation: type 2s steps(30, end);
+      }
+    }
+  }
+
+  &-nav {
+    .list {
+      display: flex;
+      list-style: none;
+
+      &-item {
+        & + .list-item {
+          margin-left: 2em;
+        }
+
+        &__link {
+          text-decoration: none;
+          color: var(--color-main);
+          transition: .2s;
+
+          &:hover {
+            transform: scale(1.1);
+            color: var(--color-second);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xl-size) {
+  .header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+
+    &-logo {
+      display: flex;
+      text-decoration: none;
+
+      &__title {
+        text-decoration: none;
+      }
+
+      &__subtitle {
+        display: none;
+      }
+
+      &:hover {
+        .header-logo__subtitle {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs-size) {
+  .header {
+    flex-direction: column;
+
+    &-logo {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-nav {
+      .list {
+        flex-direction: column;
+
+        &-item {
+          text-align: center;
+          margin-top: .5em;
+
+          & + .list-item {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@-webkit-keyframes type{
+  from { width: 0; }
+}

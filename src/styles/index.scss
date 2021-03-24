@@ -1,0 +1,62 @@
+@import './variables';
+@import './header';
+@import './main';
+@import './footer';
+@import './rules';
+@import './score';
+@import './home';
+@import './game';
+@import './settings';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// THEME
+:root {
+  --color-main: #{$color-main};
+  --color-second: #{$color-second};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-first};
+  --bg-color-second: #{$bg-color-second};
+}
+
+body.STANDARD {
+  --color-main: #{$color-main};
+  --color-second: #{$color-second};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-first};
+  --bg-color-second: #{$bg-color-second};
+}
+
+body.INVERT {
+  --color-main: #{$color-second};
+  --color-second: #{$color-main};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$bg-color-second};
+  --bg-color-second: #{$bg-color-first};
+}
+
+body.SIMPLE {
+  --color-main: #{$color-black};
+  --color-second: #{$color-white};
+  --color-third: #{$color-third};
+  --bg-color-first: #{$color-third};
+  --bg-color-second: #{$bg-color-first};
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background:
+    linear-gradient(to right, var(--bg-color-first), var(--bg-color-second)),
+    linear-gradient(to left, var(--bg-color-first), var(--bg-color-second));
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

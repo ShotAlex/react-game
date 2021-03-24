@@ -1,0 +1,18 @@
+.main {
+  transition: 2s;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  flex-grow: 1;
+  animation: .5s ease-in 0s slowShowing;
+}
+
+@keyframes slowShowing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

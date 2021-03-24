@@ -1,0 +1,141 @@
+.game {
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+
+  &-item {
+    text-align: center;
+    flex: 1;
+
+    &__title {
+      font-size: 3rem;
+      color: var(--color-main);
+      margin-top: 1em;
+      text-transform: uppercase;
+    }
+
+    &__result {
+      font-size: 1.2rem;
+      color: var(--color-main);
+      text-transform: uppercase;
+    }
+
+    &__play-again {
+      display: block;
+      margin: 1em auto;
+      padding: 1em 2em;
+      text-decoration: none;
+      border: 1px solid var(--color-main);
+      border-radius: .25em;
+      color: var(--color-second);
+      font-size: 1.5em;
+      transition: .2s;
+      width: fit-content;
+
+
+      animation-name: play-again;
+      animation-duration: 250ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+
+      &:hover {
+        color: var(--color-main);
+        border-color: var(--color-second);
+      }
+    }
+  }
+}
+
+@keyframes play-again {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: $lg-size) {
+  .game {
+    &-item {
+      &__title {
+        font-size: 2rem;
+      }
+
+      &__result {
+        font-size: 1.2rem;
+        height: 2em;
+      }
+
+      &__play-again {
+        padding: 1em;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm-size) {
+  .game {
+    &-item {
+      &__title {
+        font-size: 1.6rem;
+        margin-top: 1.5em;
+      }
+
+      &__result {
+        font-size: 1rem;
+      }
+
+      &__img {
+        width: 10em;
+        height: 10em;
+      }
+
+      &__play-again {
+        margin: 1em auto 0;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs-size) {
+  .game {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+
+    &-item {
+      margin: .2em;
+      padding: 0;
+
+      &.main {
+        order: 3;
+      }
+
+      &__title {
+        font-size: 2rem;
+        margin-top: 1em;
+      }
+
+      &__result {
+        font-size: 1.2rem;
+      }
+
+      &__img {
+        margin-top: 2em;
+        width: 8em;
+        height: 8em;
+      }
+
+      &__play-again {
+        margin: 1em auto;
+        padding: 1em 2em;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
